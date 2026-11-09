@@ -6,7 +6,7 @@ That iPad stuck on iOS 12 in a drawer still has a great screen. OldPadDeck turns
 
 Nothing to install on the iPad: a small menu-bar app on the Mac serves the interface to Safari over your home network.
 
-**[Website](https://oldpaddeck.com/) · [Download](https://github.com/n3oraZor/OldPadDeck/releases/latest) · [Install guide](https://oldpaddeck.com/install.html) · [FAQ](https://oldpaddeck.com/faq.html)**
+**[Website](https://oldpaddeck.com/) · [Download](https://github.com/n3oraZor/OldPadDeck/releases/latest) · [Install guide](https://oldpaddeck.com/install) · [FAQ](https://oldpaddeck.com/faq)**
 
 | Deck | Cockpit | Focus |
 |---|---|---|
