@@ -1,5 +1,5 @@
 /* OldPadDeck website: nav, scroll reveal, copy buttons, the hero mode switcher, the docs table of contents
-   and the live demo (the real iPad interface talking to the mock Mac server from web/mock). */
+   and the live demo (the real iPad interface with a simulated Mac running in the page, docs/demo-app). */
 (function () {
   var root = document.documentElement;
   root.className += ' js';
@@ -87,30 +87,32 @@
   // ---- live demo ----
   var demo = $('#demo');
   if (demo) {
-    // The mock Mac (web/mock/server.mjs) runs on this machine; `#pair=123456` pairs the demo by itself.
-    // same host as this page, so the iframe's pairing cookie is first-party (localhost and 127.0.0.1 are different sites)
-    var base = location.protocol === 'file:' ? 'http://localhost:' + demo.getAttribute('data-port') + '/'
-      : location.protocol + '//' + location.hostname + ':' + demo.getAttribute('data-port') + '/';
+    // demo-app/ is the real iPad client with a simulated Mac running inside the page (web/src/demo): static files only.
+    var base = demo.getAttribute('data-src');
     var frame = $('iframe', demo), vp = $('.viewport', demo), off = $('.demo-off', demo), status = $('#demoStatus');
     var fit = function () {
       var w = vp.clientWidth, h = vp.clientHeight, k = Math.min(w / 1024, h / 768);
       frame.style.transform = 'scale(' + k + ')';
       frame.style.left = (w - 1024 * k) / 2 + 'px'; frame.style.top = (h - 768 * k) / 2 + 'px';
     };
-    var load = function () { frame.src = base + '#pair=123456'; };
     var setStatus = function (ok) {
       status.className = 'status ' + (ok ? 'ok' : 'ko');
-      status.lastChild.textContent = ok ? 'Live: connected to a simulated Mac' : 'Demo server offline';
+      status.lastChild.textContent = ok ? 'Live: a simulated Mac, running in your browser' : 'Demo unavailable';
       off.classList.toggle('show', !ok);
     };
-    var probe = function () {
-      // no-cors: an opaque answer still means the server is up
-      return fetch(base + 'apple-touch-icon.png', { mode: 'no-cors', cache: 'no-store' }).then(function () { return true; }, function () { return false; });
+    // the deck (.app, after the splash) should be up within a few seconds: if not, say so instead of a blank screen
+    var check = function () {
+      setTimeout(function () {
+        var d = null;
+        try { d = frame.contentDocument; } catch (e) { /* not same-origin: can't tell */ }
+        setStatus(!d || !!d.querySelector('.app'));
+      }, 4000);
     };
+    var load = function () { off.classList.remove('show'); frame.src = base + '?t=' + Date.now(); check(); };
+    load();
     window.addEventListener('resize', fit); fit();
-    probe().then(function (ok) { setStatus(ok); if (ok) load(); });
-    $('#demoReload').addEventListener('click', function () { probe().then(function (ok) { setStatus(ok); if (ok) load(); }); });
-    $('#demoOpen').setAttribute('href', base + '#pair=123456');
+    $('#demoReload').addEventListener('click', load);
+    $('#demoOpen').setAttribute('href', base);
     $('#demoFull').addEventListener('click', function () {
       var el = vp;
       var req = el.requestFullscreen || el.webkitRequestFullscreen;
