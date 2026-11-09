@@ -2,7 +2,7 @@
 
 **Give your old iPad a second life as a Stream Deck-style controller and live dashboard for your Mac.**
 
-That iPad stuck on iOS 12 in a drawer still has a great screen. OldPadDeck turns it into a desk companion: keys that launch apps and run Shortcuts, media and volume controls, a trackpad, live CPU / memory / battery gauges, a Pomodoro timer, today's calendar and reminders, a clock and the weather.
+That old iPad in a drawer still has a great screen. OldPadDeck turns it into a desk companion: keys that launch apps and run Shortcuts, media and volume controls, a trackpad, live CPU / memory / battery gauges, a Pomodoro timer, today's calendar and reminders, a clock and the weather.
 
 Nothing to install on the iPad: a small menu-bar app on the Mac serves the interface to Safari over your home network.
 
@@ -17,7 +17,7 @@ Nothing to install on the iPad: a small menu-bar app on the Mac serves the inter
 Get the latest disk image (`OldPadDeck-<version>.dmg`) from [Releases](https://github.com/n3oraZor/OldPadDeck/releases/latest), open it and drag OldPadDeck to Applications. It's one app for Apple silicon and Intel Macs, signed and notarized by Apple.
 
 - **Mac:** macOS 14 Sonoma or later
-- **iPad:** Safari on iOS 12 or later (built for and tested on an iPad Air, 1st generation)
+- **iPad:** any iPad from the iPad Air and iPad mini 2 (2013) on, with Safari on iOS 12 or later (built for and tested on an iPad Air, 1st generation)
 - Both on the same home network
 
 ## Feedback
