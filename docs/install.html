@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Install guide · OldPadDeck</title>
+<meta name="description" content="Build OldPadDeck on your Mac, pair your iPad, grant permissions and turn the iPad into a desk display.">
+<meta name="theme-color" content="#06070c">
+<meta name="color-scheme" content="dark">
+<link rel="icon" type="image/png" href="images/icon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Install guide">
+<meta property="og:description" content="Build OldPadDeck on your Mac, pair your iPad, grant permissions and turn the iPad into a desk display.">
+<meta property="og:image" content="https://oldpaddeck.com/images/mode-deck.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="images/icon.png" alt="">OldPadDeck</a>
+    <div class="nav-links" id="navLinks">
+      <a href="features.html">Features</a>
+      <a href="demo.html" class="demo-link">Live demo</a>
+      <a href="install.html" aria-current="page">Install</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <a class="nav-gh dl" href="https://github.com/n3oraZor/OldPadDeck/releases/latest"><svg class="i" width="16" height="16" aria-hidden="true"><use href="assets/icons.svg#download"/></svg>Download</a>
+    <button class="burger" type="button" aria-label="Menu" aria-controls="navLinks" aria-expanded="false"><svg class="i" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#menu"/></svg></button>
+  </div>
+</nav>
+
+<main>
+<section class="page-hero">
+  <div class="glows"><div class="glow indigo"></div><div class="glow clay"></div></div>
+  <div class="wrap">
+    <div class="eyebrow">Install guide</div>
+    <h1>From drawer to desk <span class="grad">in ten minutes.</span></h1>
+    <p class="lede">Download the app, pair the iPad with a code, and put it on its stand. No account, no subscription, nothing to install on the iPad.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="docs">
+    <nav class="toc" aria-label="On this page">
+      <b>On this page</b>
+      <a href="#requirements">Requirements</a>
+      <a href="#install">Install on the Mac</a>
+      <a href="#pair">Pair the iPad</a>
+      <a href="#permissions">Permissions</a>
+      <a href="#desk">Make it a desk display</a>
+      <a href="#dnd">Do Not Disturb</a>
+      <a href="#update">Update and uninstall</a>
+      <a href="#troubleshooting">Troubleshooting</a>
+    </nav>
+
+    <div class="prose">
+      <section id="requirements">
+        <h2>Requirements</h2>
+        <div class="reqs">
+          <div class="req"><b>Mac</b>macOS 14 Sonoma or later, Apple silicon or Intel</div>
+          <div class="req"><b>iPad</b>Safari on iOS 12 or later</div>
+          <div class="req"><b>Network</b>Both on the same home Wi-Fi</div>
+        </div>
+        <p>That's all. Optional: <code>brew install libimobiledevice</code> if you want iPhone and iPad batteries on the deck.</p>
+      </section>
+
+      <section id="install">
+        <h2>Install on the Mac</h2>
+        <ol class="numbered">
+          <li><b>Download</b> the latest <code>OldPadDeck.dmg</code>.<br><a class="dl-chip" href="https://github.com/n3oraZor/OldPadDeck/releases/latest"><svg class="i" width="16" height="16" aria-hidden="true"><use href="assets/icons.svg#download"/></svg>Download for Mac</a></li>
+          <li><b>Open it</b> and drag OldPadDeck onto the Applications folder.</li>
+          <li><b>Launch OldPadDeck</b> from Applications. An iPad icon appears in the menu bar.</li>
+        </ol>
+        <div class="callout"><svg class="i" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#shield"/></svg><div><b>Signed and notarized.</b> The app is signed with a Developer ID and checked by Apple, so it opens without a security warning. It's one universal app for Apple silicon and Intel Macs.</div></div>
+        <p>Want it to start with your Mac? Turn on <b>Launch at Login</b> in the menu-bar menu.</p>
+      </section>
+
+      <section id="pair">
+        <h2>Pair the iPad</h2>
+        <ol class="numbered">
+          <li>On the Mac, open <b>Pair a Device…</b>: click the iPad icon in the menu bar, or the app in the Dock. A QR code and a 6-digit PIN appear.</li>
+          <li>On the iPad, scan the QR code with the Camera, or open the address shown in Safari and type the PIN.</li>
+          <li>In Safari: <b>Share → Add to Home Screen</b>, then open OldPadDeck from the home screen. It pairs itself and runs full screen.</li>
+        </ol>
+        <div class="figs">
+          <figure><div class="shot"><img src="images/pairing.jpg" alt="Pair this iPad: a 6-digit PIN pad" width="1280" height="960" loading="lazy"></div><figcaption>Type the PIN shown on the Mac.</figcaption></figure>
+          <figure><div class="shot"><img src="images/install-prompt.jpg" alt="Add OldPadDeck to your Home Screen, in three steps" width="1280" height="960" loading="lazy"></div><figcaption>Then add it to the home screen.</figcaption></figure>
+        </div>
+        <div class="callout warn"><svg class="i" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#lock"/></svg><div><b>The PIN is short-lived on purpose.</b> It's accepted only while the Pair window is open, works once, and expires after 3 minutes or 5 wrong tries. Press <b>New Code</b> for another. Only devices on the Mac's own local network can connect.</div></div>
+      </section>
+
+      <section id="permissions">
+        <h2>Permissions</h2>
+        <p>macOS asks for each permission the first time a feature needs it. <b>Permissions…</b> in the menu-bar menu shows where you stand and opens the right page of System Settings.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Permission</th><th>Used for</th></tr></thead>
+            <tbody>
+              <tr><td>Accessibility</td><td>Keys, typing text, trackpad, window tiling, lock</td></tr>
+              <tr><td>Automation: System Events</td><td>Dark mode</td></tr>
+              <tr><td>Automation: Music, Spotify</td><td>Now playing, media controls</td></tr>
+              <tr><td>Calendars</td><td>Today's events</td></tr>
+              <tr><td>Reminders</td><td>Today's reminders</td></tr>
+              <tr><td>Bluetooth</td><td>AirPods battery levels</td></tr>
+              <tr><td>Screen Recording</td><td>Screenshots</td></tr>
+              <tr><td>System Audio Recording</td><td>Sending the Mac's sound to an AirPlay speaker</td></tr>
+              <tr><td>Local Network</td><td>Serving the interface to the iPad (macOS 15 and later)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>You only need the ones for the widgets you use. Everything else keeps working without them.</p>
+      </section>
+
+      <section id="desk">
+        <h2>Make it a desk display</h2>
+        <ul>
+          <li><b>Never sleep:</b> iPad Settings → Display &amp; Brightness → Auto-Lock → Never, and keep it on its charger.</li>
+          <li><b>Lock it to the app:</b> Settings → Accessibility → Guided Access, then triple-click the home button inside OldPadDeck.</li>
+          <li><b>Pick your city:</b> on the iPad, ⚙ → Weather. It's Paris until you change it.</li>
+          <li><b>Stand it up:</b> any tablet stand works. In landscape, the home button sits on the right.</li>
+        </ul>
+      </section>
+
+      <section id="dnd">
+        <h2>Do Not Disturb</h2>
+        <p>macOS has no public API for Focus, so OldPadDeck runs two Shortcuts you create once:</p>
+        <ol class="numbered">
+          <li>In the Shortcuts app on the Mac, create a shortcut that turns on the Focus you want (for example <b>Focus On</b>) and one that turns it off (<b>Focus Off</b>).</li>
+          <li>On the iPad, open ⚙ → Do Not Disturb and enter the two names.</li>
+          <li>The Do Not Disturb key and the Pomodoro option now use them.</li>
+        </ol>
+      </section>
+
+      <section id="update">
+        <h2>Update and uninstall</h2>
+        <h3>Update</h3>
+        <p>Download the new version and drag it onto Applications to replace the old one. Your layout, paired iPads and stats are kept: they live outside the app, and a new default layout never replaces one you've customised.</p>
+        <h3>Uninstall</h3>
+        <p>Quit OldPadDeck from its menu and drag it from Applications to the Bin. To also remove your layout and paired devices, and make macOS forget its permissions, paste this in Terminal:</p>
+        <div class="code"><span class="p">$ </span>rm -rf ~/Library/Application\ Support/MacDeck
+<span class="p">$ </span>tccutil reset All io.github.n3orazor.macdeck<button class="copy" type="button" aria-label="Copy commands" data-copy="rm -rf ~/Library/Application\ Support/MacDeck&#10;tccutil reset All io.github.n3orazor.macdeck"><svg class="i" width="16" height="16" aria-hidden="true"><use href="assets/icons.svg#copy"/></svg></button></div>
+        <p>On the iPad, delete the home-screen icon.</p>
+      </section>
+
+      <section id="troubleshooting">
+        <h2>Troubleshooting</h2>
+        <h3>The iPad can't reach the Mac</h3>
+        <p>Both must be on the same network, and the Mac must allow <b>Local Network</b> access for OldPadDeck (System Settings → Privacy &amp; Security, macOS 15 and later). Guest networks and some mesh routers keep devices apart. A VPN on the Mac can hide its local address.</p>
+        <h3>The PIN is refused</h3>
+        <p>The Pair window has to stay open on the Mac while you type it. After 3 minutes or 5 wrong tries, press <b>New Code</b>.</p>
+        <h3>Keys, typing or the trackpad do nothing</h3>
+        <p>Grant <b>Accessibility</b> to OldPadDeck in System Settings → Privacy &amp; Security. If it's already on, switch it off and on again, or remove OldPadDeck from the list and add it back.</p>
+        <h3>An AirPlay speaker is greyed out</h3>
+        <p>OldPadDeck streams to AirPlay 1 speakers that accept unencrypted audio without a password. Speakers that only speak AirPlay 2 are listed but can't be used.</p>
+        <h3>iPhone or iPad batteries don't show</h3>
+        <p>Install <code>libimobiledevice</code> with Homebrew, plug the device into the Mac once over USB, trust the Mac, and tick <b>Show this iPhone when on Wi-Fi</b> in the Finder.</p>
+        <h3>The screen goes dark</h3>
+        <p>Set Auto-Lock to Never. OldPadDeck also keeps the iPad awake by itself once you tap <b>Touch to start</b>.</p>
+      </section>
+
+
+      <div class="pager">
+        <a href="demo.html"><span>Previous</span><b>← Live demo</b></a>
+        <a class="next" href="how-it-works.html"><span>Next</span><b>How it works →</b></a>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="index.html"><img src="images/icon.png" alt="">OldPadDeck</a>
+        <p>Give your old iPad a second life as a control deck and live dashboard for your Mac. Free to download.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <a href="features.html">Features</a>
+        <a href="demo.html">Live demo</a>
+        <a href="how-it-works.html">How it works</a>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <a href="install.html">Install guide</a>
+        <a href="install.html#troubleshooting">Troubleshooting</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <a href="https://github.com/n3oraZor/OldPadDeck/releases/latest">Download</a>
+        <a href="https://github.com/n3oraZor/OldPadDeck/issues/new/choose">Report a bug</a>
+        <a href="https://github.com/n3oraZor/OldPadDeck/blob/main/SECURITY.md">Security policy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>Inspired by <a href="https://github.com/GLAUCOMA82/OldPhoneDeck">OldPhoneDeck</a> by GLAUCOMA82. OldPadDeck is a separate implementation written from scratch for the iPad.</span>
+      <span>© 2026 n3oraZor. All rights reserved.</span>
+      <span>Not affiliated with Apple or Elgato. Mac, iPad, iOS, Safari and AirPlay are trademarks of Apple Inc.</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

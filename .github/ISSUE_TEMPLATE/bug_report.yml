@@ -1,0 +1,55 @@
+name: Bug report
+description: Something doesn't work on the Mac app or on the iPad.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report! Security issues: please don't file them here, see SECURITY.md (private report).
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, what you got instead. Screenshots welcome.
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: e.g. macOS 15.1
+    validations:
+      required: true
+  - type: dropdown
+    id: mac
+    attributes:
+      label: Mac model
+      options:
+        - Apple Silicon (M1 or later)
+        - Intel
+    validations:
+      required: true
+  - type: input
+    id: mac-model
+    attributes:
+      label: Mac model name (optional)
+      placeholder: e.g. MacBook Air M2, 2022
+  - type: input
+    id: ipad
+    attributes:
+      label: iPad model and iOS / iPadOS version
+      placeholder: e.g. iPad Air (1st generation), iOS 12.5.7
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: OldPadDeck version
+      description: In the menu-bar menu, or Finder → Applications → OldPadDeck → Get Info.
+      placeholder: e.g. 0.1.0
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs (optional)
+      description: Anything relevant from Console.app (filter on OldPadDeck).
+      render: text

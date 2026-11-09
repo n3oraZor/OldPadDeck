@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FAQ · OldPadDeck</title>
+<meta name="description" content="Which iPads work, what it costs, whether it's safe, AirPlay, Windows, and the honest limitations of OldPadDeck.">
+<meta name="theme-color" content="#06070c">
+<meta name="color-scheme" content="dark">
+<link rel="icon" type="image/png" href="images/icon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FAQ">
+<meta property="og:description" content="Which iPads work, what it costs, whether it's safe, AirPlay, Windows, and the honest limitations of OldPadDeck.">
+<meta property="og:image" content="https://oldpaddeck.com/images/mode-deck.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="images/icon.png" alt="">OldPadDeck</a>
+    <div class="nav-links" id="navLinks">
+      <a href="features.html">Features</a>
+      <a href="demo.html" class="demo-link">Live demo</a>
+      <a href="install.html">Install</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="faq.html" aria-current="page">FAQ</a>
+    </div>
+    <a class="nav-gh dl" href="https://github.com/n3oraZor/OldPadDeck/releases/latest"><svg class="i" width="16" height="16" aria-hidden="true"><use href="assets/icons.svg#download"/></svg>Download</a>
+    <button class="burger" type="button" aria-label="Menu" aria-controls="navLinks" aria-expanded="false"><svg class="i" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#menu"/></svg></button>
+  </div>
+</nav>
+
+<main>
+<section class="page-hero center">
+  <div class="glows"><div class="glow indigo"></div><div class="glow clay"></div></div>
+  <div class="wrap">
+    <div class="eyebrow">FAQ</div>
+    <h1>Questions, <span class="grad">answered.</span></h1>
+    <p class="lede">And the limitations, stated plainly. OldPadDeck is a hobby project: here's what to know before you install it.</p>
+  </div>
+</section>
+
+<div class="wrap narrow">
+  <div class="faq-group rv">
+    <h2>The basics</h2>
+    <details open><summary>Which iPads work?</summary><div class="ans"><p>OldPadDeck was built for, and tested on, an <b>iPad Air (1st generation) on iOS 12</b>. Any iPad with Safari on iOS 12 or later should work, including newer ones, but only the iPad Air 1 has been tested.</p></div></details>
+    <details><summary>Does it work with an iPhone?</summary><div class="ans"><p>The interface is laid out for an iPad screen in landscape. For an old iPhone, look at <a href="https://github.com/GLAUCOMA82/OldPhoneDeck">OldPhoneDeck</a>, the project that inspired this one.</p></div></details>
+    <details><summary>What does it cost?</summary><div class="ans"><p>Nothing. It's free to download and use: no account, no subscription, no ads.</p></div></details>
+    <details><summary>Do I install anything on the iPad?</summary><div class="ans"><p>No. The iPad opens a web page served by your Mac. Add it to the home screen and it runs full screen like an app. No App Store, no jailbreak, no profile.</p></div></details>
+    <details><summary>Where do I download it?</summary><div class="ans"><p>From the <a href="https://github.com/n3oraZor/OldPadDeck/releases/latest">download page</a>: a disk image with one app for Apple silicon and Intel Macs, signed and notarized by Apple so it opens without a warning.</p></div></details>
+    <details><summary>Do I need Xcode or any developer tools?</summary><div class="ans"><p>No. Download the app and open it, like any other Mac app.</p></div></details>
+    <details><summary>Does it work on Windows or Linux?</summary><div class="ans"><p>No. The server is a native macOS app, and it relies on macOS frameworks for almost everything it shows and does.</p></div></details>
+  </div>
+
+  <div class="faq-group rv">
+    <h2>Using it</h2>
+    <details><summary>Can I change the layout?</summary><div class="ans"><p>Yes, all of it. Tap ••• → Edit to move, resize, replace or delete any widget, add new ones from the catalog, and rename, delete or add tabs (up to six). Try it in the <a href="demo.html">live demo</a>.</p></div></details>
+    <details><summary>Will an update reset my layout?</summary><div class="ans"><p>No. Your layout is saved on the Mac, and a new default layout never overwrites one you've customised.</p></div></details>
+    <details><summary>Why does the iPad switch modes on its own?</summary><div class="ans"><p>It follows what you do: switch to Spotify and it goes to Studio, start a Pomodoro and it goes to Focus, leave it alone for 10 minutes and it goes to Standby. Pin a mode to keep it where it is.</p></div></details>
+    <details><summary>Can it play to my AirPlay speakers?</summary><div class="ans"><p>Yes, with limits. macOS gives apps no way to change the system's AirPlay destination, so OldPadDeck has its own AirPlay sender: it captures all of the Mac's sound and streams it to one speaker that accepts unencrypted <b>AirPlay 1</b> without a password, with about 2 seconds of delay. AirPlay 2-only speakers are listed but can't be used.</p></div></details>
+    <details><summary>Does Do Not Disturb work?</summary><div class="ans"><p>Through two Shortcuts you create once (one that turns a Focus on, one that turns it off), because macOS has no public API for it. See <a href="install.html#dnd">the install guide</a>.</p></div></details>
+    <details><summary>Can two iPads connect at once?</summary><div class="ans"><p>Yes. Pair each one; they share the same layout and stay in sync.</p></div></details>
+    <details><summary>Is the interface in my language?</summary><div class="ans"><p>It's in English, or in French when the iPad is set to French.</p></div></details>
+  </div>
+
+  <div class="faq-group rv">
+    <h2>Privacy and safety</h2>
+    <details><summary>Does it send my data anywhere?</summary><div class="ans"><p>No. There's no account, no analytics and no cloud service. Everything stays on your Mac. The only outside requests are the weather (Open-Meteo), track artwork and the icons of websites your keys open.</p></div></details>
+    <details><summary>Is it safe?</summary><div class="ans"><p>On a home network you trust, yes. Pairing needs a short-lived PIN, only devices on your local network can connect, and you can revoke any device from the menu bar. But traffic isn't encrypted, so don't run it on public or office networks, and treat a paired iPad like an unlocked keyboard: it can type, click and quit apps. Details in <a href="how-it-works.html#security">How it works</a>.</p></div></details>
+    <details><summary>What if I lose or sell the iPad?</summary><div class="ans"><p>Open Paired Devices in the menu bar and revoke it. Its token stops working at once.</p></div></details>
+  </div>
+
+  <div class="faq-group rv" id="limits">
+    <h2>Honest limitations</h2>
+    <div class="limits" style="grid-template-columns:1fr;margin-top:22px">
+      <div class="limit"><svg class="i" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#warn"/></svg><div><h3>Trusted home network only</h3><p>Plain HTTP and WebSocket, without TLS. Quit the app on networks you don't trust.</p></div></div>
+      <div class="limit"><svg class="i" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#warn"/></svg><div><h3>A paired iPad controls your Mac</h3><p>Keys, typing, pointer, apps, links, Shortcuts, quitting apps. Revoke it if it's lost or sold.</p></div></div>
+      <div class="limit"><svg class="i" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#warn"/></svg><div><h3>The iPad has to stay on</h3><p>It's a live web page: keep it awake and plugged in.</p></div></div>
+      <div class="limit"><svg class="i" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#warn"/></svg><div><h3>Permissions and extra tools</h3><p>Some widgets need Accessibility, Automation, Calendars, Reminders or Bluetooth access; iPhone and iPad batteries need libimobiledevice.</p></div></div>
+      <div class="limit"><svg class="i" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#warn"/></svg><div><h3>Undocumented Apple APIs</h3><p>Display brightness, temperatures and fan speeds use private macOS interfaces that an update may break.</p></div></div>
+      <div class="limit"><svg class="i" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#warn"/></svg><div><h3>One person, one test iPad</h3><p>It's a hobby project, tested on one iPad Air. Bug reports are welcome on GitHub.</p></div></div>
+    </div>
+  </div>
+
+  <div class="card rv" style="margin-top:56px;text-align:center">
+    <h3 style="margin-top:0">Still curious?</h3>
+    <p>Open an issue on GitHub, or try the interface yourself.</p>
+    <div class="cta" style="margin-top:20px">
+      <a class="btn green small" href="demo.html"><svg class="i" width="16" height="16" aria-hidden="true"><use href="assets/icons.svg#play"/></svg>Live demo</a>
+      <a class="btn ghost small" href="https://github.com/n3oraZor/OldPadDeck/issues"><svg class="i" width="16" height="16" aria-hidden="true"><use href="assets/icons.svg#gh"/></svg>Open an issue</a>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="index.html"><img src="images/icon.png" alt="">OldPadDeck</a>
+        <p>Give your old iPad a second life as a control deck and live dashboard for your Mac. Free to download.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <a href="features.html">Features</a>
+        <a href="demo.html">Live demo</a>
+        <a href="how-it-works.html">How it works</a>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <a href="install.html">Install guide</a>
+        <a href="install.html#troubleshooting">Troubleshooting</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <a href="https://github.com/n3oraZor/OldPadDeck/releases/latest">Download</a>
+        <a href="https://github.com/n3oraZor/OldPadDeck/issues/new/choose">Report a bug</a>
+        <a href="https://github.com/n3oraZor/OldPadDeck/blob/main/SECURITY.md">Security policy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>Inspired by <a href="https://github.com/GLAUCOMA82/OldPhoneDeck">OldPhoneDeck</a> by GLAUCOMA82. OldPadDeck is a separate implementation written from scratch for the iPad.</span>
+      <span>© 2026 n3oraZor. All rights reserved.</span>
+      <span>Not affiliated with Apple or Elgato. Mac, iPad, iOS, Safari and AirPlay are trademarks of Apple Inc.</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>
