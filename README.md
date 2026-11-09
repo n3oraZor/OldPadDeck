@@ -14,7 +14,7 @@ Nothing to install on the iPad: a small menu-bar app on the Mac serves the inter
 
 ## Download
 
-Get the latest `OldPadDeck.dmg` from [Releases](https://github.com/n3oraZor/OldPadDeck/releases/latest), open it and drag OldPadDeck to Applications. It's one app for Apple silicon and Intel Macs, signed and notarized by Apple.
+Get the latest disk image (`OldPadDeck-<version>.dmg`) from [Releases](https://github.com/n3oraZor/OldPadDeck/releases/latest), open it and drag OldPadDeck to Applications. It's one app for Apple silicon and Intel Macs, signed and notarized by Apple.
 
 - **Mac:** macOS 14 Sonoma or later
 - **iPad:** Safari on iOS 12 or later (built for and tested on an iPad Air, 1st generation)
