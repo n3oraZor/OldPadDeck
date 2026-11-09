@@ -6,7 +6,7 @@ That old iPad in a drawer still has a great screen. OldPadDeck turns it into a d
 
 Nothing to install on the iPad: a small menu-bar app on the Mac serves the interface to Safari over your home network.
 
-**[Website](https://oldpaddeck.com/) · [Download](https://github.com/n3oraZor/OldPadDeck/releases/latest) · [Install guide](https://oldpaddeck.com/install) · [FAQ](https://oldpaddeck.com/faq)**
+**[Website](https://oldpaddeck.com/) · [Download](https://github.com/n3oraZor/OldPadDeck/releases/latest/download/OldPadDeck.dmg) · [Install guide](https://oldpaddeck.com/install) · [FAQ](https://oldpaddeck.com/faq)**
 
 | Deck | Cockpit | Focus |
 |---|---|---|
@@ -14,7 +14,7 @@ Nothing to install on the iPad: a small menu-bar app on the Mac serves the inter
 
 ## Download
 
-Get the latest disk image (`OldPadDeck-<version>.dmg`) from [Releases](https://github.com/n3oraZor/OldPadDeck/releases/latest), open it and drag OldPadDeck to Applications. It's one app for Apple silicon and Intel Macs, signed and notarized by Apple.
+[Download `OldPadDeck.dmg`](https://github.com/n3oraZor/OldPadDeck/releases/latest/download/OldPadDeck.dmg) (always the latest version; release notes in [Releases](https://github.com/n3oraZor/OldPadDeck/releases)), open it and drag OldPadDeck to Applications. It's one app for Apple silicon and Intel Macs, signed and notarized by Apple.
 
 - **Mac:** macOS 14 Sonoma or later
 - **iPad:** any iPad from the iPad Air and iPad mini 2 (2013) on, with Safari on iOS 12 or later (built for and tested on an iPad Air, 1st generation)
