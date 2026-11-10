@@ -3,7 +3,7 @@
   --bg: #06070c;
   --text: #f5f5f7;
   --dim: #a1a1a8;
-  --dim-2: #6e6e76;
+  --dim-2: #8a8a93;
   --line: rgba(255, 255, 255, .08);
   --card: rgba(255, 255, 255, .045);
   --card-edge: rgba(255, 255, 255, .1);
@@ -353,6 +353,7 @@ main > :last-child:not(.closing) { padding-bottom: 110px; }
   .pulse { animation: none; }
 }
 @media (max-width: 560px) {
+  .mode-caption { min-height: 108px; } /* the longest caption: the page must not jump as the tabs rotate */
   body { font-size: 16px; }
   .wrap { padding: 0 16px; }
   .hero { padding-top: 48px; }
@@ -365,3 +366,6 @@ main > :last-child:not(.closing) { padding-bottom: 110px; }
   .pager { grid-template-columns: 1fr; }
   .pager .next { grid-column: 1; }
 }
+
+.demo-small { display: none; margin: 12px 0 0; font-size: 14px; color: var(--dim); }
+@media (max-width: 700px) { .demo-small { display: block; } }

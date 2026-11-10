@@ -100,19 +100,26 @@
       status.lastChild.textContent = ok ? 'Live: a simulated Mac, running in your browser' : 'Demo unavailable';
       off.classList.toggle('show', !ok);
     };
-    // the deck (.app, after the splash) should be up within a few seconds: if not, say so instead of a blank screen
+    // The deck (.app, after the splash) shows up once the bundle is in: watch for it rather than judge once, so a slow
+    // connection doesn't leave "didn't start" over a demo that works.
+    var watch = null;
     var check = function () {
-      setTimeout(function () {
-        var d = null;
-        try { d = frame.contentDocument; } catch (e) { /* not same-origin: can't tell */ }
-        setStatus(!d || !!d.querySelector('.app'));
-      }, 4000);
+      var tries = 0;
+      clearInterval(watch);
+      watch = setInterval(function () {
+        var d = null, ok = false;
+        try { d = frame.contentDocument; ok = !!(d && d.querySelector('.app')); } catch (e) { ok = true; /* can't look inside: assume fine */ }
+        if (ok) { clearInterval(watch); setStatus(true); }
+        else if (++tries >= 40) { clearInterval(watch); setStatus(false); }   // 20 s
+      }, 500);
     };
     var load = function () { off.classList.remove('show'); frame.src = base + '?t=' + Date.now(); check(); };
     load();
     window.addEventListener('resize', fit); fit();
     $('#demoReload').addEventListener('click', load);
     $('#demoOpen').setAttribute('href', base);
+    // iPhone Safari has no element fullscreen: don't offer a button that does nothing
+    if (!(vp.requestFullscreen || vp.webkitRequestFullscreen)) $('#demoFull').style.display = 'none';
     $('#demoFull').addEventListener('click', function () {
       var el = vp;
       var req = el.requestFullscreen || el.webkitRequestFullscreen;

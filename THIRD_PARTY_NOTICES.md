@@ -37,3 +37,7 @@ Weather forecasts and city search come from the [Open-Meteo](https://open-meteo.
 ## OldPhoneDeck
 
 OldPadDeck was inspired by [OldPhoneDeck](https://github.com/GLAUCOMA82/OldPhoneDeck) by GLAUCOMA82 (MIT). It is a separate implementation; no code from OldPhoneDeck is included.
+
+## App icons in the live demo
+
+The app icons shown in the website's live demo and screenshots (Safari, Finder, Mail, Spotify, Slack and others) are trademarks of their respective owners. They illustrate what the deck shows on a Mac and imply no endorsement.
