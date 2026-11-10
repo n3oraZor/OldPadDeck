@@ -135,7 +135,7 @@
         <h2>Security model</h2>
         <div class="callout warn"><svg class="i" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#warn"/></svg><div><b>Home network only.</b> The iPad and the Mac talk over plain HTTP and WebSocket, without TLS. On a café, hotel or office network, someone could capture a paired device's token. Quit the app on networks you don't trust.</div></div>
         <ul>
-          <li><b>Pairing</b> needs the 6-digit PIN shown on the Mac, accepted only while the Pair window is open. It works once and expires after 3 minutes or 5 wrong tries.</li>
+          <li><b>Pairing</b> needs the 6-digit PIN shown on the Mac, accepted only while the Pair window is open. It works once, expires after 3 minutes, and a device gets 5 tries per code.</li>
           <li><b>Tokens</b> are random, sent as HttpOnly cookies, and stored on the Mac only as SHA-256 hashes.</li>
           <li><b>Local only:</b> the server answers only clients on the Mac's own subnets, and WebSocket connections must come from the app's own origin.</li>
           <li><b>Revoke any time:</b> Paired Devices in the menu bar. A revoked token stops working at once.</li>
