@@ -128,4 +128,55 @@
     document.addEventListener('fullscreenchange', function () { setTimeout(fit, 50); });
     document.addEventListener('webkitfullscreenchange', function () { setTimeout(fit, 50); });
   }
+
+  // ---- feedback form (docs/feedback.html): posts to the Worker of worker/feedback, falls back to e-mail ----
+  var fb = $('#fbForm');
+  if (fb) {
+    var API = 'https://api.oldpaddeck.com/feedback', MAIL = 'hello@oldpaddeck.com';
+    var q = {};
+    location.search.replace(/^\?/, '').split('&').forEach(function (kv) {
+      var i = kv.indexOf('='); if (i < 1) return;
+      try { q[decodeURIComponent(kv.slice(0, i))] = decodeURIComponent(kv.slice(i + 1).replace(/\+/g, ' ')); } catch (e) {}
+    });
+    var tag = function (v) { return /^[0-9A-Za-z][0-9A-Za-z. _-]{0,23}$/.test(v || '') ? v : ''; };
+    var version = tag(q.v), os = tag(q.os);
+    var msg = $('#fbMessage'), mail = $('#fbEmail'), send = $('#fbSend'), err = $('#fbError'), meta = $('#fbMeta');
+    var kindOf = function () { var c = $('input[name="kind"]:checked', fb); return c ? c.value : 'other'; };
+    if (/^(thanks|idea|problem)$/.test(q.kind || '')) $('input[name="kind"][value="' + q.kind + '"]', fb).checked = true;
+    if (version) { meta.textContent = 'Sent with your message: OldPadDeck ' + version + (os ? ' · macOS ' + os : '') + '.'; meta.hidden = false; }
+    var fail = function (text, withMail) {
+      err.textContent = text;
+      if (withMail) {
+        var a = document.createElement('a');
+        a.href = 'mailto:' + MAIL + '?subject=' + encodeURIComponent('OldPadDeck feedback') + '&body=' + encodeURIComponent(msg.value.slice(0, 1500));
+        a.textContent = MAIL;
+        err.appendChild(document.createTextNode(' You can also write to '));
+        err.appendChild(a);
+        err.appendChild(document.createTextNode('.'));
+      }
+      err.hidden = false; send.disabled = false; send.textContent = 'Send';
+    };
+    fb.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      err.hidden = true;
+      var text = msg.value.replace(/^\s+|\s+$/g, ''), email = mail.value.replace(/^\s+|\s+$/g, '');
+      if (!text) { fail('Write a few words first.'); msg.focus(); return; }
+      if (email && !(mail.checkValidity ? mail.checkValidity() : /@/.test(email))) { fail('That e-mail address doesn’t look right. Fix it, or leave the field empty.'); mail.focus(); return; }
+      if (!window.fetch) { fail('This browser can’t send the form.', true); return; }
+      send.disabled = true; send.textContent = 'Sending…';
+      var body = { kind: kindOf(), message: text, email: email, version: version, os: os, website: $('#fbWebsite').value };
+      fetch(API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
+        .then(function (r) { return r.json().then(function (d) { return { status: r.status, d: d || {} }; }, function () { return { status: r.status, d: {} }; }); })
+        .then(function (r) {
+          if (r.status === 200 && r.d.ok) {
+            $('#fbDoneText').textContent = email ? 'Your message is on its way. If it calls for an answer, it will come to ' + email + '.' : 'Your message is on its way.';
+            fb.hidden = true; var done = $('#fbDone'); done.hidden = false;
+            if (done.scrollIntoView) done.scrollIntoView({ block: 'center' });
+          } else if (r.d.error === 'bad_email') { fail('That e-mail address doesn’t look right. Fix it, or leave the field empty.'); }
+          else if (r.d.error === 'too_long') { fail('That message is too long for the form (4,000 characters).', true); }
+          else if (r.d.error === 'rate_limited') { fail('That’s a lot of messages in one minute. Try again in a moment.'); }
+          else { fail('The message couldn’t be sent.', true); }
+        }, function () { fail('The message couldn’t be sent: check your connection.', true); });
+    });
+  }
 })();
