@@ -403,3 +403,19 @@ main > :last-child:not(.closing) { padding-bottom: 110px; }
 .fb-other p { margin: 0 0 10px; }
 [hidden] { display: none !important; }
 @media (max-width: 560px) { .fb { padding: 22px; } }
+
+/* ---------- what's new ---------- */
+.fine .latest { color: inherit; text-decoration: underline; text-decoration-color: rgba(255, 255, 255, .25); text-underline-offset: 3px; }
+.fine .latest:hover { color: var(--text); }
+.releases { margin-top: 8px; }
+.rel { padding: 28px 0; border-top: 1px solid var(--line); }
+.rel:first-child { border-top: 0; }
+.rel-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 14px; }
+.rel-head h2 { font-size: 26px; margin: 0; }
+.rel-head time { color: var(--dim); font-size: 15px; }
+.rel-tag { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--green); }
+.rel p, .rel li { color: var(--dim); font-size: 16px; line-height: 1.6; }
+.rel b { color: var(--text); }
+.rel ul { margin: 12px 0 0; padding-left: 20px; }
+.rel li + li { margin-top: 6px; }
+.rel-follow { color: var(--dim); font-size: 15px; margin: 8px 0 72px; padding-top: 24px; border-top: 1px solid var(--line); }

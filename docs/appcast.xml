@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>OldPadDeck</title>
+    <link>https://oldpaddeck.com/whats-new</link>
+    <description>New versions of OldPadDeck</description>
+    <language>en</language>
+    <item>
+      <title>OldPadDeck 0.1.7</title>
+      <pubDate>Fri, 13 Nov 2026 12:00:00 +0000</pubDate>
+      <sparkle:version>202611130042</sparkle:version>
+      <sparkle:shortVersionString>0.1.7</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <sparkle:fullReleaseNotesLink>https://oldpaddeck.com/whats-new</sparkle:fullReleaseNotesLink>
+      <description><![CDATA[<ul><li><b>OldPadDeck now updates itself.</b> On its second launch, it asks whether to check for new versions automatically (once a day). When one is out, a blue dot appears on its Dock and menu bar icons, and <b>Check for Updates…</b> shows what changed and installs it in one click, then relaunches.</li><li><b>The iPad tells you too:</b> a blue dot on the ••• button, and a line in its menu. Tap it to open the update window on the Mac.</li><li>Every update is signed, and the app refuses one that isn't. The check reads a small file on oldpaddeck.com and sends nothing about your Mac.</li><li>New on the website: <a href="https://oldpaddeck.com/whats-new">What's new</a>, with every version.</li></ul>]]></description>
+      <enclosure url="https://github.com/n3oraZor/OldPadDeck/releases/download/v0.1.7/OldPadDeck.dmg" length="3478099" type="application/octet-stream" sparkle:edSignature="HoMVex7duIR+XsytSEBnq2sf+jr+eYHCzMAgV/volL5VUxvceXEfP91ZYDbkoeT3+Gir95/CUgYHVel5ZYdsCw=="/>
+    </item>
+  </channel>
+</rss>
