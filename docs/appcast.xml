@@ -6,6 +6,16 @@
     <description>New versions of OldPadDeck</description>
     <language>en</language>
     <item>
+      <title>OldPadDeck 0.1.8</title>
+      <pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
+      <sparkle:version>202611192000</sparkle:version>
+      <sparkle:shortVersionString>0.1.8</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <sparkle:fullReleaseNotesLink>https://oldpaddeck.com/whats-new</sparkle:fullReleaseNotesLink>
+      <description><![CDATA[<ul><li><b>The iPad stays paired.</b> On some iPads the deck could come back to the pairing screen and ask for the code again, typically after the Mac had slept, although the Mac still knew the iPad. The iPad now keeps its pairing in a second place and reconnects by itself within seconds.</li><li>An iPad paired with an earlier version picks this up at its next connection. If it is already showing the pairing screen, type the code one last time (menu bar icon → <b>Pair a Device…</b>).</li><li><b>Pairing behaves.</b> The Pair a Device window on the Mac could draw its text and its code on top of each other, and an iPad whose request got no answer stayed on “Pairing…”. The window keeps its layout, and the iPad gives up after a few seconds and lets you type the code again.</li><li>When the Mac refuses a device, it now notes why in a small local file, to make such problems easier to track down. Nothing leaves your Mac.</li></ul>]]></description>
+      <enclosure url="https://github.com/n3oraZor/OldPadDeck/releases/download/v0.1.8/OldPadDeck.dmg" length="4572841" type="application/octet-stream" sparkle:edSignature="zStKKKx7GjMTCHO/km1oUYbXJAOT2MTOQu3x32Hd+TP4Oofl/1T8IsIWUaE7NcxwXucwZZJfvZIMqWLqM1SMCw=="/>
+    </item>
+    <item>
       <title>OldPadDeck 0.1.7</title>
       <pubDate>Fri, 13 Nov 2026 12:00:00 +0000</pubDate>
       <sparkle:version>202611130042</sparkle:version>
