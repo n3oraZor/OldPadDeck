@@ -6,6 +6,16 @@
     <description>New versions of OldPadDeck</description>
     <language>en</language>
     <item>
+      <title>OldPadDeck 0.1.9</title>
+      <pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
+      <sparkle:version>202611201430</sparkle:version>
+      <sparkle:shortVersionString>0.1.9</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <sparkle:fullReleaseNotesLink>https://oldpaddeck.com/whats-new</sparkle:fullReleaseNotesLink>
+      <description><![CDATA[<ul><li><b>A menu that reads at a glance.</b> The menu bar and Dock menus now say plainly whether your iPad is there: “iPad connected” or “Waiting for your iPad”.</li><li>Two things at the first level: <b>Configure Deck</b> and <b>Pair a Device</b>. Everything you set once (Launch at Login, Permissions, Paired Devices, the iPad address, updates, feedback) is under <b>Settings</b>. When an update is waiting, it shows at the top of the menu.</li><li><b>Paired Devices</b> shows the devices you use. Older ones can be removed in one click.</li><li>In Configure Deck, the side bar now runs to the edge of the window, so the window buttons no longer sit on its corner.</li></ul>]]></description>
+      <enclosure url="https://github.com/n3oraZor/OldPadDeck/releases/download/v0.1.9/OldPadDeck.dmg" length="3500979" type="application/octet-stream" sparkle:edSignature="WNLbsiZP1GS3HTqnMLGkJx5Xu4rt3DsjC10EFjoOhyJRS/ZePDZEMGCG28ZPy+iDscwLuLTg3ugK5h3dydAyDw=="/>
+    </item>
+    <item>
       <title>OldPadDeck 0.1.8</title>
       <pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
       <sparkle:version>202611192000</sparkle:version>
