@@ -6,6 +6,16 @@
     <description>New versions of OldPadDeck</description>
     <language>en</language>
     <item>
+      <title>OldPadDeck 0.1.10</title>
+      <pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
+      <sparkle:version>202611201936</sparkle:version>
+      <sparkle:shortVersionString>0.1.10</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <sparkle:fullReleaseNotesLink>https://oldpaddeck.com/whats-new</sparkle:fullReleaseNotesLink>
+      <description><![CDATA[<ul><li><b>Move your iPad to another Mac.</b> The iPad's Settings now have <b>Disconnect from this Mac</b>. After a confirmation, the Mac forgets the iPad and the iPad goes back to the pairing screen.</li><li>The pairing screen explains how to use the iPad with another Mac: on that Mac, choose <b>Pair a Device…</b> in the OldPadDeck menu, then scan its code with the iPad’s Camera.</li></ul>]]></description>
+      <enclosure url="https://github.com/n3oraZor/OldPadDeck/releases/download/v0.1.10/OldPadDeck.dmg" length="3509492" type="application/octet-stream" sparkle:edSignature="vMt97uGXdxlElPnsegksugMvKW+JQJ2j6tX3sXkeXP2I+XRvscdIjA07xHRr2knDmYuXPYpgIYP3sCtK6zPKCg=="/>
+    </item>
+    <item>
       <title>OldPadDeck 0.1.9</title>
       <pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
       <sparkle:version>202611201430</sparkle:version>
