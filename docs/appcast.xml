@@ -6,6 +6,16 @@
     <description>New versions of OldPadDeck</description>
     <language>en</language>
     <item>
+      <title>OldPadDeck 0.1.11</title>
+      <pubDate>Sat, 21 Nov 2026 12:00:00 +0000</pubDate>
+      <sparkle:version>202611211346</sparkle:version>
+      <sparkle:shortVersionString>0.1.11</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <sparkle:fullReleaseNotesLink>https://oldpaddeck.com/whats-new</sparkle:fullReleaseNotesLink>
+      <description><![CDATA[<ul><li><b>Switch your iPad between Macs in one tap.</b> When you open <b>Pair a Device</b> on another Mac of the same network, the iPad offers to switch to it. Tap <b>Switch</b>, type the code that Mac shows, and you’re done: no Safari, no new Home Screen icon.</li><li>The Mac you left forgets the iPad as soon as the new one has paired it. Changed your mind? <b>Cancel and stay</b> takes you back.</li><li>The Home Screen icon follows: it opens the Mac the iPad uses now. Both Macs need this version.</li></ul>]]></description>
+      <enclosure url="https://github.com/n3oraZor/OldPadDeck/releases/download/v0.1.11/OldPadDeck.dmg" length="4637369" type="application/octet-stream" sparkle:edSignature="T5AQ7WOPZIuFffTTXzPLI5+VVH7QyYHzptbsdrQhAjuEcVpFIs0BjK9HY8W02wPYuBcNfbuMUYPre45RE97aDQ=="/>
+    </item>
+    <item>
       <title>OldPadDeck 0.1.10</title>
       <pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
       <sparkle:version>202611201936</sparkle:version>
